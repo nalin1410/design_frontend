@@ -14,7 +14,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const res = await signupUser({ name, email });
+      const res = await signupUser({ name, email, number });
 
       if (res.message) {
         navigate("/thank-you");
