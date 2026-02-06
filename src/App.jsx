@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Signup from "./pages/Signup.jsx";
 import ThankYou from "./pages/ThankYou.jsx";
-import DesignBingo from "./pages/DesignBingo.jsx";
+import DesignBingo from "./pages/Designbingo.jsx"
 import Success from "./pages/Sucess.jsx";
 
 function App() {
