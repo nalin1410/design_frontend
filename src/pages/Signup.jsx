@@ -182,7 +182,7 @@ const Signup = () => {
       <div className="app-container">
         <div className="signup-card">
           <div className="hero-section">
-            <h1 className="main-title">Join The<br/>Community</h1>
+            <h1 className="main-title">Start The<br/>Game</h1>
             <p className="subtitle">Sign up to start the Bingo!</p>
             <div className="white-curve"></div>
           </div>
