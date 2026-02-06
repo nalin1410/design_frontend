@@ -48,7 +48,7 @@ const ThankYou = () => {
     setInputValue("");
   };
   const submitBingoToBackend = async (payload) => {
-    const res = await fetch("http://127.0.0.1:5000/api/bingo/submit", {
+    const res = await fetch("https://design-meetup-backend.onrender.com/api/bingo/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
