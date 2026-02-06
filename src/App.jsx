@@ -1,14 +1,40 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Signup from "./pages/Signup.jsx";
 import ThankYou from "./pages/ThankYou.jsx";
-import About from "./pages/About.jsx";
+import DesignBingo from "./pages/DesignBingo.jsx";
+import Success from "./pages/Sucess.jsx";
 
 function App() {
+  // Check if the user has already finished the bingo
+  const isLocked = localStorage.getItem("bingoCompleted") === "true";
+
   return (
     <Routes>
-      <Route path="/" element={<Signup />} />
-      <Route path="/thank-you" element={<ThankYou />} />
-      <Route path="/about" element={<About />} />
+      {/* If isLocked is true, any attempt to visit these 
+          routes will instantly kick them back to /success 
+      */}
+      <Route 
+        path="/" 
+        element={isLocked ? <Navigate to="/success" replace /> : <DesignBingo />} 
+      />
+      
+      <Route 
+        path="/signup" 
+        element={isLocked ? <Navigate to="/success" replace /> : <Signup />} 
+      />
+      
+      <Route 
+        path="/thank-you" 
+        element={isLocked ? <Navigate to="/success" replace /> : <ThankYou />} 
+      />
+
+      <Route path="/success" element={<Success />} />
+
+      {/* Fallback: Redirect any unknown URL to success if locked, else home */}
+      <Route 
+        path="*" 
+        element={<Navigate to={isLocked ? "/success" : "/"} replace />} 
+      />
     </Routes>
   );
 }
