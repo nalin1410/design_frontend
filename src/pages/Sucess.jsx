@@ -185,13 +185,13 @@ const Success = () => {
             </div>
             
             <div className="socials">
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="social-link">
+              <a href="https://www.instagram.com/the.draft.room/?hl=en" target="_blank" rel="noreferrer" className="social-link">
                 Follow on Instagram
               </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/company/thedraftroomcommunity/" target="_blank" rel="noreferrer" className="social-link">
                 Connect on LinkedIn
               </a>
-              <a href="#" className="community-btn">
+              <a href="https://chat.whatsapp.com/Ixvv9uknVMv9QWhyRMpvSn" className="community-btn">
                 Join Our Community 🚀
               </a>
             </div>
